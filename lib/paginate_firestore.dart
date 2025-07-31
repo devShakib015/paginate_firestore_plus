@@ -215,8 +215,8 @@ class _PaginateFirestoreState extends State<PaginateFirestore> {
     if (widget.listeners != null && widget.listeners!.isNotEmpty) {
       return MultiProvider(
         providers: widget.listeners!
-            .map((_listener) => ChangeNotifierProvider(
-                  create: (context) => _listener,
+            .map((listener) => ChangeNotifierProvider(
+                  create: (context) => listener,
                 ))
             .toList(),
         child: gridView,
@@ -279,8 +279,8 @@ class _PaginateFirestoreState extends State<PaginateFirestore> {
     if (widget.listeners != null && widget.listeners!.isNotEmpty) {
       return MultiProvider(
         providers: widget.listeners!
-            .map((_listener) => ChangeNotifierProvider(
-                  create: (context) => _listener,
+            .map((listener) => ChangeNotifierProvider(
+                  create: (context) => listener,
                 ))
             .toList(),
         child: listView,
@@ -322,8 +322,8 @@ class _PaginateFirestoreState extends State<PaginateFirestore> {
     if (widget.listeners != null && widget.listeners!.isNotEmpty) {
       return MultiProvider(
         providers: widget.listeners!
-            .map((_listener) => ChangeNotifierProvider(
-                  create: (context) => _listener,
+            .map((listener) => ChangeNotifierProvider(
+                  create: (context) => listener,
                 ))
             .toList(),
         child: pageView,
